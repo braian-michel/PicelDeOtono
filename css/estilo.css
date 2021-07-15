@@ -577,7 +577,9 @@ section {
 }
 
  /* ===== FOOTER =====*/
+ /* ===== FOOTER =====*/
 .footer{
+  display: grid;
   background-color: #480066;
   color: #fff;
   font-weight: 600;
@@ -586,8 +588,14 @@ section {
 
 .footer_title{
   font-size: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-family: 'Mountains of Christmas', cursive;
 }
+
+.footer_icon{
+	font-size: 20px;
+	color: #fff;
+	margin: 0 16px;
+  }
 
 
