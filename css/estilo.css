@@ -1,0 +1,593 @@
+/*Base*/
+
+*,::before,::after{
+	box-sizing: border-box;}
+
+html {
+	scroll-behavior: smooth;}
+
+body {
+	margin: 48px 16px 16px 16px;
+	font-family: 'Prociono', serif;
+	font-size: 15px;
+	color: #480066;
+	text-align: center;
+	text-shadow: 1px white;
+}
+
+h1, h2, p {
+	margin: 5px;}
+
+ul {
+	margin:0;
+	padding: 0;
+	list-style: none;}  
+
+a {
+	text-decoration: none!important; 
+}
+
+a:hover {
+	color: #fff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: 300px;
+	display: block;
+	border-image: 1px white;
+}
+
+.modal_img {
+	display: inline-block;
+}
+
+/* Clase CSS*/
+.section-title {
+	position: relative;
+	font-size: 20px;
+	color: #dc2d22;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+section {	
+    padding-top: 32px;
+    margin-bottom: 32px
+}
+
+/* Layout */
+.grid {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-column-gap: 32px;
+	width: calc(100% - 32px);
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.l-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #480066;
+	box-shadow: 0 1px 4px rgba(146, 161, 176, .15);
+	opacity: 0.8;
+}
+
+
+/* Barra Navegación */
+.barra_nav {
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 700;
+	color: #e1cc4f ;
+}
+
+
+/* =========== Dispositivos pequeños ==========*/
+@media screen and (max-width: 768px) {
+
+	.nav_logo {
+		font-size: 32px!important;
+	}
+
+	.nav_menu {
+		position: fixed;
+		top: 48px;
+		right: -100%;
+		width: 80%;
+		height: 100%;
+		padding: 32px;
+		background-color: #0E2431;
+		transition: 0.5s;
+	}
+
+	.menu_list {
+		display: block;
+	}
+
+	.nav_menu {
+		height: auto!important;
+		opacity: 1.0!important;
+		top:70px;
+		width: 30%;
+		background: #480066;
+	}
+
+	.nav_item{
+	    font-size: 15px!important;
+	    font-family: 'Chelsea Market', cursive;
+ 	}
+
+	body {
+		margin: 0; 
+	}
+
+	.about_pictures{
+		display: flex;
+		grid-template-columns: repeat(1,3fr);
+		text-align: center;
+		column-gap: 0.5px;
+		padding: 15px;
+	}
+	
+	.about_text {
+		grid-template-columns: repeat(1,1fr);
+		text-align: center;
+		column-gap: 0.5px;
+		padding: 15px;
+	}
+
+	#img1 {
+		margin-bottom: 40px;
+		border-radius: 10%;
+		width: 280px;
+		padding: 5px;
+		height: 280px;
+	}
+
+	img {
+	    max-width: 100%;
+	    height: auto;
+	    width: 300px;
+	    display: block;
+	}
+
+	.img_text h3 {
+		color: #fff;
+		text-align: center;
+		font-size: 15px;
+		padding: 5px
+	}
+
+	.contact_container {
+		grid-template-columns: repeat(1,3fr);
+	}
+
+	.obras_img img {
+		height: 150px !important;
+	}
+
+	.contact-title {
+		margin-top: 20px!important;
+	}	
+
+}
+
+
+/* ========== Celulares ==========*/
+@media screen and (max-width: 426px) {
+	
+	.nav_menu {
+		width: 50%;
+	}
+
+	.welcome_section h1 {
+		font-size:55px!important;
+	}
+
+	#img1 {
+		margin-bottom: 40px;
+		border-radius: 10%;
+		width: 280px;
+		padding: 5px;
+		height: 120px;
+	}
+
+	.obras_container {
+	    grid-template-columns: repeat(2,6fr)!important;
+	}
+
+	.obras_img img {
+		height: 120px !important;
+	}
+
+}
+
+@media screen and (max-width: 321px) {
+	
+	img.nav_img{
+		margin-top: 25px;
+	}
+	
+	.nav_logo{
+		font-size: 28px!important;
+	}
+
+	.welcome_section h1 {
+	font-size:40px!important;
+	}
+
+}
+
+
+/*======General=======*/
+.nav_item {
+	margin: 10px 20px 15px 20px;
+}
+
+.menu_link {
+	position: relative;
+	color: #fff;
+}
+
+.menu_link:hover {
+	position: relative;
+}
+
+.menu_link:hover::after{
+	position:absolute;
+	content: "";
+	width: 100%;
+	height: 2.9px;
+	left: 0;
+	top: 32px;
+	background: #fff;
+}
+
+.logo {
+	display: flex;
+}
+
+.nav_logo {
+	color: #e1cc4f;
+	position: relative;
+	font-size: 20px;
+}
+
+.menu_icon {
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer; 
+}
+
+
+/* Menu*/
+.active::after {
+	position: absolute;
+	content:"";
+	width: 100%;
+	height: 2.9px;
+	left: 0;
+	top: 32px;
+	background: #fff;	
+}
+
+
+/*Mostrar Menu*/
+.show {
+	right: 0;
+}
+
+
+/*===== Dispositivos grandes =====*/
+@media screen and (min-width: 769px) {
+  
+	body{
+	margin: 0;
+	}
+
+	.menu_icon{
+	display: none; /*El desplegable solo para mobile*/
+	}
+
+	.about_pictures{
+		display: flex;
+		grid-template-columns: repeat(1,3fr);
+		align-items: center;
+		column-gap: 15px;
+		margin: auto;
+		padding: 15px;
+	}
+	
+	.about_text {
+		grid-template-columns: repeat(1,1fr);
+		text-align: center;
+		padding: 10px;
+	}
+
+	#img1 {
+		display: flex;
+		margin-bottom: 40px;
+		border-radius: 10%;
+		width: 300px;
+		padding: 5px;
+		height: 300px;
+	}
+
+	.img_text h3 {
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	padding: 5px
+	}
+
+	.contact_container {
+	grid-template-columns: repeat(3,1fr);
+	}
+
+	.menu_list{
+    display: flex;
+    padding-top: 0;
+  	}
+
+}
+
+
+  .section-title{
+    padding: 15px;
+    font-size: 35px;
+    font-family: 'Chelsea Market', cursive;
+    color: #480066;
+    text-align: center;
+  }
+
+  .barra_nav{
+    height: calc(65px + 16px);
+  }
+
+  .nav_img {
+  	width: auto;
+  	border-radius: 100%;
+  	height: calc(48px + 8px);
+  	margin-top: 10px;
+  }
+
+  .nav_logo {
+  	padding: 12px;
+  	font-size: 38px;
+  	font-family: 'Mountains of Christmas', cursive;
+  }
+
+
+  .instagram {
+  	width: auto;
+  	height: calc(48px + 8px);
+  	margin:auto;
+  }
+
+  .facebook {
+  	width: auto;
+  	height: calc(48px + 8px);
+  	margin:auto;
+  }
+
+  .nav_item{
+    font-size: 20px;
+    font-family: 'Chelsea Market', cursive;
+  }
+
+  .menu_link{
+    color: #e1cc4f;
+  }
+
+
+/*Welcome*/
+.back_img {
+	background-image: url("../img/fondo.jpg");
+	width: 100%;
+	height: 700px;
+	position: relative;
+	background-size: cover;
+	margin-bottom: 0;
+	opacity: 0.8;
+}
+
+.back_img::before {
+	content: "";
+	top: 0; 
+	left: 0;
+	width: 100%; 
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	background-position: center center;	  
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.welcome_section h1 { 
+	margin-top: 20%;
+	margin-bottom: 5%;
+	text-align: center;
+    color: #fff;
+    font-size: 72px;
+    font-family: 'Chelsea Market', cursive;
+    font-weight: 800;
+    z-index: 1
+}
+
+
+/*Boton ver mas*/
+.button {
+	display: inline-block;
+	border: solid 1px white;
+	border-radius: 8px;
+	padding: 12px 30px;
+	font-weight: 600;
+	font-family: 'Spartan', sans-serif
+}
+
+.button a {
+	color: #fff;
+}
+
+
+/*Sobre MI*/
+.about_section {
+	background: black;
+	opacity: 0.9;
+	margin-bottom: 0;
+}
+
+.about-title {
+	color: #9400d3
+}
+
+.about_subtitle {
+	margin-bottom: 30px
+}
+
+
+.about_text {
+	text-align: center;
+	font-family: 'Spartan', sans-serif;
+	text-align: center;
+	font-size: 15px;
+	color: #9400d3;
+}
+
+.about_text h2 {
+	font-size: 30px;
+	color: #9400d3;
+}
+
+
+
+  /* Obras */
+ .obras_container{
+    grid-template-columns: repeat(4,4fr);
+    align-items: center;
+    text-align: center;
+    column-gap: 32px;
+    z-index: 1;
+    opacity: 1.0;
+ }
+
+.obras_img {
+	margin-bottom: 50px;
+}
+
+.obras_img img {
+	border-radius: 0%;
+	border: 10px solid #480066;
+	height: 200px;
+}
+
+
+.obras_img img:hover {
+  transform: scale(1.1);  
+}
+
+
+.img_text {
+	background: #9400d3;
+	border-radius: 8px;
+	opacity: 0.6;
+}
+
+
+ /* ===== Contact =====*/
+.contact_section {
+    text-align: center;
+    column-gap: 0.5px;
+    padding-bottom: 25px;
+	text-align: initial;
+	background: black;
+	opacity: 0.9;
+	margin-bottom: 15px;
+}
+
+
+.contact-title {
+	color: #9400d3;
+	text-align: initial;
+	padding-left: 20px;
+	margin-top: 0px
+}
+
+.contact-sub {
+	color: #fff;
+	font-size: 22px;
+	text-align: initial;
+	padding-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.contact_section p{
+	color: #9400d3;
+	font-size: 20px;
+	padding-left: 18px;
+}
+
+.contact_social{
+  margin-bottom:10px;
+  padding-left: 18px;
+}
+
+.contact_icon{
+  font-size: 30px;
+  color: #9400d3;
+  margin: 5px;
+}
+
+
+/*====== Formulario =========*/
+.contact_input{
+  width: 100%!important;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #0E2431;
+  outline: none;
+  margin-bottom: 32px;
+}
+
+.send{
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: auto;
+  width: 100%;
+  background: #480066;
+  color: #fff;
+}
+
+ /* ===== FOOTER =====*/
+.footer{
+  background-color: #480066;
+  color: #fff;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.footer_title{
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-family: 'Mountains of Christmas', cursive;
+}
+
+
